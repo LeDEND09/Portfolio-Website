@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SOlar System</title>
+</head>
+    <style>
+        body {
+            background-image: url('https://cdn.theatlantic.com/thumbor/qOP_fwtgivaPVGatcrdYku4UR0w=/297x0:2484x2187/1080x1080/media/img/mt/2015/10/Cygnus_v3_BandW/original.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container {
+            position: relative;
+            width: 1100px;
+            height: 1100px;
+        }
+        .box1 {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            height: 150px;
+            width: 150px;
+            background-color: #FED33C;
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            box-shadow: 0 0 50px 20px #FED33C;
+        }
+        .orbit {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            border: 2px dashed rgba(255,255,255,0.3);
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .box2, .box3, .box4, .box5, .box6, .box7, .box8, .box9 {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            border-radius: 50%;
+            background-size: cover;
+            background-position: center;
+        }
+        .orbit1 {
+            width: 250px;
+            height: 250px;
+            animation: rotate1 10s linear infinite;
+        }
+        .orbit2 {
+            width: 340px;
+            height: 340px;
+            animation: rotate2 15s linear infinite;
+        }
+        .orbit3 {
+            width: 450px;
+            height: 450px;
+            animation: rotate3 20s linear infinite;
+        }
+        .orbit4 {
+            width: 570px;
+            height: 570px;
+            animation: rotate4 25s linear infinite;
+        }
+        .asteroid-belt {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 670px;
+            height: 670px;
+            border: 2px dotted rgba(200,200,200,0.4);
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 0;
+            pointer-events: none;
+        }
+        .orbit5 {
+            width: 770px;
+            height: 770px;
+            animation: rotate5 30s linear infinite;
+        }
+        .orbit6 {
+            width: 870px;
+            height: 870px;
+            animation: rotate6 35s linear infinite;
+        }
+        .orbit7 {
+            width: 970px;
+            height: 970px;
+            animation: rotate7 40s linear infinite;
+        }
+        .orbit8 {
+            width: 1050px;
+            height: 1050px;
+            animation: rotate8 45s linear infinite;
+        }
+        
+        .box2 { 
+            height: 45px;
+            width: 45px;
+            background-color: #b1b1b1;
+            transform: translate(125px, 0);
+            box-shadow: 0 0 10px 2px #b1b1b1;
+        }
+        .box3 { 
+            height: 55px;
+            width: 55px;
+            background-color: #e6c07a;
+            transform: translate(170px, 0);
+            box-shadow: 0 0 12px 2px #e6c07a;
+        }
+        .box4 { 
+            height: 60px;
+            width: 60px;
+            background-image: url('https://upload.wikimedia.org/wikipedia/commons/9/97/The_Earth_seen_from_Apollo_17.jpg');
+            transform: translate(225px, 0);
+            box-shadow: 0 0 14px 2px #3a9efd;
+        }
+        .box5 { 
+            height: 50px;
+            width: 50px;
+            background-color: #c1440e;
+            transform: translate(285px, 0);
+            box-shadow: 0 0 10px 2px #c1440e;
+        }
+        .box6 { 
+            height: 90px;
+            width: 90px;
+            background-color: #f4e2d8;
+            transform: translate(385px, 0);
+            box-shadow: 0 0 18px 3px #f4e2d8;
+            background-image: url('https://upload.wikimedia.org/wikipedia/commons/e/e2/Jupiter.jpg');
+        }
+        .box7 { 
+            height: 80px;
+            width: 80px;
+            background-color: #e3c16f;
+            transform: translate(435px, 0);
+            box-shadow: 0 0 18px 3px #e3c16f;
+            background-image: url('https://cdn.mos.cms.futurecdn.net/CezGDwWwaU3R5woZEHyVf7.jpg');
+            z-index: 2;
+        }
+       
+        .box8 {
+            height: 70px;
+            width: 70px;
+            background-color: #b6b6b6;
+            transform: translate(485px, 0);
+            box-shadow: 0 0 14px 2px #b6b6b6;
+            background-image: url('https://upload.wikimedia.org/wikipedia/commons/3/3d/Uranus2.jpg');
+        }
+        .box9 { 
+            height: 65px;
+            width: 65px;
+            background-color: #7ec8e3;
+            transform: translate(525px, 0);
+            box-shadow: 0 0 14px 2px #7ec8e3;
+            background-image: url('https://upload.wikimedia.org/wikipedia/commons/5/56/Neptune_Full.jpg');
+        }
+        @keyframes rotate1 {
+            0% { transform: translate(-50%, -50%) rotate(0deg); }
+            100% { transform: translate(-50%, -50%) rotate(360deg); }
+        }
+        @keyframes rotate2 {
+            0% { transform: translate(-50%, -50%) rotate(0deg); }
+            100% { transform: translate(-50%, -50%) rotate(360deg); }
+        }
+        @keyframes rotate3 {
+            from { transform: translate(-50%, -50%) rotate(0deg); }
+            to { transform: translate(-50%, -50%) rotate(360deg); }
+        }
+        @keyframes rotate4 {
+            from { transform: translate(-50%, -50%) rotate(0deg); }
+            to { transform: translate(-50%, -50%) rotate(360deg); }
+        }
+        @keyframes rotate5 {
+            from { transform: translate(-50%, -50%) rotate(0deg); }
+            to { transform: translate(-50%, -50%) rotate(360deg); }
+        }
+        @keyframes rotate6 {
+            from { transform: translate(-50%, -50%) rotate(0deg); }
+            to { transform: translate(-50%, -50%) rotate(360deg); }
+        }
+        @keyframes rotate7 {
+            from { transform: translate(-50%, -50%) rotate(0deg); }
+            to { transform: translate(-50%, -50%) rotate(360deg); }
+        }
+        @keyframes rotate8 {
+            from { transform: translate(-50%, -50%) rotate(0deg); }
+            to { transform: translate(-50%, -50%) rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box1"></div> 
+
+        <div class="orbit orbit1">
+            <div class="box2"></div> 
+        </div>
+        <div class="orbit orbit2">
+            <div class="box3"></div> 
+        </div>
+        <div class="orbit orbit3">
+            <div class="box4"></div> 
+        </div>
+        <div class="orbit orbit4">
+            <div class="box5"></div> 
+        </div>
+        <div class="asteroid-belt"></div>
+        <div class="orbit orbit5">
+            <div class="box6"></div> 
+        </div>
+        <div class="orbit orbit6">
+            <div class="box7"></div> 
+            <div class="saturn-ring"></div>
+        </div>
+        <div class="orbit orbit7">
+            <div class="box8"></div> 
+        </div>
+        <div class="orbit orbit8">
+            <div class="box9"></div> 
+        </div>
+    </div>
+</body>
+</html>
