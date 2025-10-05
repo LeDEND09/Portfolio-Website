@@ -131,7 +131,7 @@ header img {
 }
 
 .leftsection div {
-  font-size: 1.5rem;
+  font-size: 2rem;
   margin: 10px 0;
 }
 
@@ -352,7 +352,7 @@ footer a:hover {
 }
 
 
-@media (max-width: 1000px) {
+@media (max-width: 900px) {
   .firstsection {
     flex-direction: column-reverse;
     text-align: center;
@@ -373,17 +373,9 @@ footer a:hover {
     flex: 1 1 250px;
     text-align: center;
   }
-   .tabs {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
-    width: 100%;
-    flex-direction: row;
-    align-items: center;
-  }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 480px) {
   .leftsection div {
     font-size: 1.5rem;
   }
@@ -396,8 +388,5 @@ footer a:hover {
   }
   .contact-info {
     flex-direction: column;
-  }
-     .tabs {
-     display: none;
   }
 }
