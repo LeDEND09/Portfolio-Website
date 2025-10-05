@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Profile Card</title>
+  <style>
+    body {
+      background-color: #f5f7fa;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .container {
+      width: 400px;
+      background-color: white;
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 40px auto;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+      padding: 20px;
+    }
+
+    .Image img {
+      object-fit: cover;
+      border-radius: 50%;
+      height: 100px;
+      width: 100px;
+    }
+
+    h2 {
+      font-size: 1.2rem;
+      font-weight: bold;
+      margin-top: 10px;
+      text-align: center;
+    }
+
+    .box2 {
+      margin-left: 20px;
+      flex: 1;
+    }
+
+    .about p {
+      margin: 0 0 15px 0;
+      color: #333;
+      line-height: 1.4;
+    }
+
+    .button button {
+      background-color: rgb(25, 113, 227);
+      color: white;
+      font-family: Arial, Helvetica, sans-serif;
+      padding: 8px 16px;
+      border-radius: 6px;
+      border: none;
+      margin-right: 10px;
+      
+    }
+
+    .button button:hover {
+      background-color: rgb(216, 176, 12);
+    }
+
+    @media (max-width: 640px) {
+      .container {
+        flex-direction: column;
+        width: 70px;
+        text-align: center;
+      }
+
+      .box2 {
+        margin-left: 0;
+        margin-top: 15px;
+      }
+
+     
+
+      .button button {
+        width: 90%;
+       
+        margin: 10px auto;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="box1">
+      <div class="Image">
+        <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png"
+          alt="Profile Picture">
+      </div>
+      <h2>Ritansh</h2>
+    </div>
+    <div class="box2">
+      <div class="about">
+        <p>Web designer & JavaScript Enthusiast. Loves clean, creative layouts and good coffee!</p>
+        <div class="button">
+          <button>Contact</button>
+          <button>Portfolio</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            /* height: 200px; */
+            padding: 20px;
+            width: 400px;
+            background-color: white;
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 40px auto;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+
+        }
+
+        div.Image {
+            object-fit: cover;
+            border-radius: 50%;
+            height: 100px;
+            width: 100px;
+        }
+
+        .about p {
+            text-wrap: wrap;
+            margin: auto;
+        }
+
+        .box2 {
+            margin: 20px;
+            flex: 1;
+
+        }
+
+        .button button {
+            background-color: rgb(25, 113, 227);
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            padding: 8px 16px;
+            border-radius: 6px;
+
+        }
+        
+        .button button:hover{
+            background-color: rgb(216, 176, 12);
+        }
+    
+        @media(max-width:640px){
+        .container {
+            height: 200px;
+            width: 400px;
+            background-color: white;
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: auto;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+
+        }
+
+        div.Image {
+            object-fit: cover;
+            border-radius: 50%;
+            height: 100px;
+            width: 100px;
+        }
+
+        .about p {
+            text-wrap: wrap;
+            margin: auto;
+        }
+
+        .box2 {
+            margin: 20px;
+            flex: 1;
+
+        }
+
+        .button button {
+            background-color: rgb(25, 113, 227);
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            padding: 8px 16px;
+            border-radius: 6px;
+
+        }
+        
+        .button button:hover{
+            background-color: rgb(216, 176, 12);
+        }
+    }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box1">
+            <div class="Image">
+                <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png" alt="" height="100px" width="100px">
+                </div>
+                <h2>Name</h2>
+        </div>
+        <div class="box2">
+            <div class="about">
+                <p>Web designer & JavaScript Enthusiast Loves clean,creative layouts and good coffee! </p>
+                <div class="button">
+                    <button>Contact</button>
+                    <button>Portfolio</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</body>
+
+</html> -->
