@@ -373,11 +373,13 @@ footer a:hover {
     flex: 1 1 250px;
     text-align: center;
   }
-    .tabs {
-    /* flex-wrap: wrap; */
+   .tabs {
+    flex-wrap: wrap;
     justify-content: center;
     gap: 10px;
     width: 100%;
+    flex-direction: row;
+    align-items: center;
   }
 }
 
