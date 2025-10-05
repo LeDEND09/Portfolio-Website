@@ -398,11 +398,6 @@ footer a:hover {
     flex-direction: column;
   }
      .tabs {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    gap: 8px;
-    width: 100%;
+     display: none;
   }
 }
